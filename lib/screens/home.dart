@@ -30,6 +30,14 @@ class Home extends StatelessWidget {
               title: Text('Iniciar sesión'),
               onTap: () => Navigator.of(context).pushNamed('/login'),
             ),
+            ListTile(
+              title: Text('Mis Widgets'),
+              onTap: () => Navigator.of(context).pushNamed('/widgets'),
+              ),
+            ListTile(
+              title: Text('Sintaxis'),
+              onTap: () => Navigator.of(context).pushNamed('/sintaxis'),
+              ),
           ],
         ),
       ),

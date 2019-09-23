@@ -1,25 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Sintaxis</title>
-  <style>
-    .caja {
-      width: 200px;
-      height: 200px;
-      background-color: #ea80fc;
-      font-family: Georgia;
-      font-weight: 800;
-      font-size: 24px;
-    }
-  </style>
-</head>
-<body>
-  <!-- Ir a https://www.materialpalette.com/ -->
-  <div class="caja">
-    Hola Flutter
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sintaxis</title>
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+      .caja {
+        width: 200px;
+        height: 200px;
+        background-color: #ea80fc;
+        font-family: Georgia;
+        font-weight: 800;
+        font-size: 24px;
+        color: white;
+      }
+      .caja2 {
+        width: 200px;
+        height: 200px;
+        background-color: #e661fd;
+        font-family: Georgia;
+        font-weight: 800;
+        font-size: 24px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /*  ancho del contenedor */
+      .greybox {
+        background-color: #e0e0e0; /* grey 300 */
+        width: 320px;
+        height: 240px;
+        font: 900 24px Roboto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .redbox {
+        background-color: #ef5350; /* red 400 */
+        padding: 16px;
+        color: #ffffff;
+        width: 100%;
+        max-width: 240px;
+      }
+      /* posicion absoluta */
+      .greybox2 {
+        background-color: #a8a7a7; /* grey 300 */
+        width: 320px;
+        height: 240px;
+        font: 900 24px Roboto;
+        position: relative;
+      }
+      .redbox2 {
+        background-color: #ef5350; /* red 400 */
+        padding: 16px;
+        color: #ffffff;
+        position: absolute;
+        top: 24px;
+        left: 24px;
+      }
+      /* Rotando componentes */
+
+      .greybox3 {
+        background-color: #e0e0e0; /* grey 300 */
+        width: 320px;
+        height: 240px;
+        font: 900 24px Roboto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .redbox3 {
+        background-color: #ef5350; /* red 400 */
+        padding: 16px;
+        color: #ffffff;
+        transform: rotate(15deg);
+      }
+
+      /* Escalando componentes */
+      .greybox4 {
+        background-color: #838181; /* grey 300 */
+        width: 320px;
+        height: 240px;
+        font: 900 24px Roboto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .redbox4 {
+        background-color: #ef5350; /* red 400 */
+        padding: 16px;
+        color: #ffffff;
+        transform: scale(1.5); 
+      }
+      /* Gradiente lineal -vertical */
+      .greybox5 {
+        background-color: #e0e0e0; /* grey 300 */
+        width: 320px;
+        height: 240px;
+        font: 900 24px Roboto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .redbox5 {
+        padding: 16px;
+        color: #ffffff;
+        background: linear-gradient(180deg, #ef5350, #00000000 80%); 
+      }
+      /* Redondeo de esquinas */
+      .greybox6 {
+        background-color: #e0e0e0; /* gray 300 */
+        width: 320px;
+        height: 240px;
+        font: 900 24px Roboto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .redbox6 {
+        background-color: #ef5350; /* red 400 */
+        padding: 16px;
+        color: #ffffff;
+        border-radius: 8px; 
+      }
+      /* Sombras a las cajas */
+      .greybox7 {
+        background-color: #e0e0e0; /* grey 300 */
+        width: 320px;
+        height: 240px;
+        font: 900 24px Roboto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .redbox7 {
+        background-color: #ef5350; /* red 400 */
+        padding: 16px;
+        color: #ffffff;
+        box-shadow: 0 2px 4px #000000cc,
+                    0 6px 20px #00000080;
+      }
+      /* Circulos y elipses */
+      .greybox {
+        background-color: #e0e0e0; /* gray 300 */
+        width: 320px;
+        height: 240px;
+        font: 900 24px Roboto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .redcircle {
+        background-color: #ef5350; /* red 400 */
+        padding: 16px;
+        color: #ffffff;
+        text-align: center;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%; 
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Ir a https://www.materialpalette.com/ -->
+    <div class="caja">
+      Hola Flutter
+    </div>
+    <div class="caja2">
+      Hola Flutter
+    </div>
+    <div class="greybox">
+      <div class="redbox">
+        Lorem ipsum
+      </div>
+    </div>
+    <div class="greybox2">
+      <div class="redbox2">
+        Lorem ipsum
+      </div>
+    </div>
+    <div class="greybox3">
+      <div class="redbox3">
+        Lorem ipsum
+      </div>
+    </div>
+    <div class="greybox4">
+      <div class="redbox4">
+        Lorem ipsum
+      </div>
+    </div>
+    <div class="greybox5">
+      <div class="redbox5">
+        Lorem ipsum
+      </div>
+    </div>
+    <div class="greybox6">
+      <div class="redbox6">
+        Lorem ipsum
+      </div>
+    </div>
+    <div class="greybox7">
+      <div class="redbox7">
+        Lorem ipsum
+      </div>
+    </div>
+    <div class="greybox">
+        <div class="redcircle">
+          Lorem ipsum
+        </div>
+      </div>
+  </body>
 </html>
